@@ -11,7 +11,13 @@ function Home() {
   return (
     <div className="home">
       <Slide />
-      <Finddream />
+      <div style={{marginTop:-400}} className="keyfeature">
+        <h2>
+        Key Features
+        </h2>
+     
+    </div>
+      {/* <Finddream /> */}
       <About />
       <KeyFeature/>
       <Connecting />

@@ -1,4 +1,4 @@
-export  const NAVITEM=[
+export  const NAVITEM1=[
     {
         TITLE:"Home",
         PATH: "/"
@@ -12,9 +12,24 @@ export  const NAVITEM=[
         TITLE:"How It Works",
         PATH: "/how-it-works"
     },
+   
+ 
+]
+
+export  const NAVITEM2=[
     {
-        TITLE:"Pricing",
-        PATH: "/pricing"
+        TITLE:"pricing",
+        PATH: "/"
     },
+    {
+        TITLE:"signUp",
+        PATH: "/register"
+    },
+   
+    {
+        TITLE:"login",
+        PATH: "/login"
+    },
+   
  
 ]

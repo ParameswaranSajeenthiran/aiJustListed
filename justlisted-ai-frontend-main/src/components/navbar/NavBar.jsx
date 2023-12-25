@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import "./navbar.scss"
 import logo from "../../assets/logo.png"
-import { NAVITEM } from '../../utils/navitem/navItem'
+import logo_green from "../../assets/logo_green.png"
+import { NAVITEM, NAVITEM1, NAVITEM2 } from '../../utils/navitem/navItem'
 import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom'
 import { Button } from '@mui/material'
 import userIcon from "../../assets/profile/profile.png";
-import { HouseSvg, LogOutSvg, MenuIconSvg, ProfileSvg, ReferralSvg } from '../../assets/icon'
+import { HouseSvg, LogOutSvg, MenuIconSvg, ProfileSvg, ReferralSvg  } from '../../assets/icon'
 import baseUrl from '../../baseURL'
 
 function NavBar() {
@@ -59,12 +60,9 @@ function NavBar() {
     return (
         <div className='navbar'>
             <div className="nav-container">
-                <div className="nav-logo" onClick={() => navigate('/')}>
-                    <img src={logo} />
-                </div>
-                <div className="nav-item">
+            <div className="nav-item" style={{marginLeft:'400px'}}>
                     <div className={`nav-links ${navOpen ? "mobile-navopen " : "mobile-navclose"}`} >
-                        {NAVITEM.map((ITEM, i) => (
+                        {NAVITEM1.map((ITEM, i) => (
                             <NavLink key={i} to={ITEM.PATH}
                                 className={({ isActive }) =>
                                     isActive ? "nav-buttonactive nav-button" : "nav-button"
@@ -74,6 +72,27 @@ function NavBar() {
 
                         ))}
                     </div>
+                  
+                </div>
+                <div style={{margin:-300,marginTop:-330} } className="nav-logo" onClick={() => navigate('/')}>
+                    <img src={logo_green} style={{height:65,width:80}} />
+                </div>
+                <div className="nav-item">
+                    <div className={`nav-links ${navOpen ? "mobile-navopen " : "mobile-navclose"}`} >
+                        {NAVITEM2.map((ITEM, i) => (
+                            <NavLink key={i} to={ITEM.PATH}
+                                className={({ isActive }) =>
+                                    isActive ? "nav-buttonactive nav-button" : "nav-button"
+                                }>
+                                {ITEM.TITLE}
+                            </NavLink>
+
+                        ))}
+                    </div>
+                   
+                </div>
+                <div className="nav-item">
+                  
                     {token !== null && token?.length > 10 ?
                         <div className="houses">
                             <div className="house">
@@ -96,7 +115,6 @@ function NavBar() {
 
                         </div> :
                         <div className="auth-buttons">
-                            <button className='login' onClick={() => navigate('/login')}>LogIn</button>
                             <button className='start-for-free' onClick={() => navigate('/register')}>Start for Free</button>
                             <MenuIconSvg className="menuhumber" onClick={() => setnavOpen(!navOpen)} />
                         </div>

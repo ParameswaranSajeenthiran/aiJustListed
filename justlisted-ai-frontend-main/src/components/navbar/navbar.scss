@@ -1,5 +1,5 @@
 .navbar {
-  background: #f7f7f7;
+  background:#000;
   height: 71px;
   flex-shrink: 0;
   width: 100%;
@@ -21,9 +21,10 @@
       padding: 0 10px 0 10px;
     }
     .nav-item {
+
       display: flex;
       align-items: center;
-      gap: 39px;
+      gap: 3px;
       height: 100%;
       .menuhumber {
         display: none;
@@ -56,7 +57,7 @@
           align-items: flex-start;
         }
         .nav-button {
-          color: #072b4f;
+          color: #FFFFFF;
           margin-left: 4px;
 
           font-family: Hero New;
@@ -115,10 +116,8 @@
         }
         .start-for-free {
           padding: 0 22px !important;
-          background: var(
-            --Primary,
-            linear-gradient(90deg, #ee4335 0%, #f9aa41 100%)
-          );
+          background: #BFFC00;
+          color: #000;
           @media screen and (width< 600px) {
             padding: 0 5px !important;
           }
@@ -216,7 +215,7 @@
   height: 60px;
   .nav-logo {
     img {
-      width: 138px;
+      width: 28px;
       object-fit: contain;
     }
   }

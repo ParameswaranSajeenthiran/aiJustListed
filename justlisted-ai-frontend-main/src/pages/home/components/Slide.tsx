@@ -1,14 +1,24 @@
 import slide from "../../../assets/home/slideimg.png";
 import { Grid, Typography, Button, Paper, Container } from "@mui/material";
 import video from "../../../assets/home/Video.png";
+import womanLake from "../../../assets/home/womanLake.png";
 
+import titleCOntainer from "../../../assets/home/titleContainer.png";
 // style for backgronnd image
 const styles = {
   paperContainer: {
-    backgroundImage: `url(${slide})`,
+    backgroundImage: `url(${womanLake})`,
     backgroundSize: "cover",
     width: "100%",
+    height:1500,
+
   },
+  titleContainer: {
+    backgroundImage: `url(${titleCOntainer})`,
+    backgroundSize: "cover",
+    width: "100%",
+    height: 600,
+  }
 };
 
 const Slide = () => {
@@ -18,14 +28,15 @@ const Slide = () => {
         item
         xs={12}
         style={styles.paperContainer}
+        paddingTop={10}
         sx={{
           mt: 9,
           mb: { xs: 0, lg: 50 },
           height: { lg: "700px", xs: "500px" },
         }}
       >
-        <Container maxWidth="lg" sx={{ textAlign: "center" }}>
-          <Typography
+        <Container style={styles.titleContainer}  maxWidth="lg" sx={{ textAlign: "center" }}>
+          {/* <Typography
             sx={{
               fontSize: { xs: "20px", lg: "60px" },
               fontWeight: "700",
@@ -42,9 +53,9 @@ const Slide = () => {
             }}
           >
             Where Innovation Meets Efficiency{" "}
-          </Typography>
+          </Typography> */}
         </Container>
-        <Container maxWidth="sm" sx={{ textAlign: "center" }}>
+        {/* <Container maxWidth="sm" sx={{ textAlign: "center" }}>
           <Typography
             sx={{ color: "#072B4F", fontSize: { xs: "8px", lg: "16px" } }}
           >
@@ -74,11 +85,13 @@ const Slide = () => {
               How it works
             </Button>
           </Grid>
-        </Grid>
-        <Grid item container justifyContent={"center"} mt={5}>
+        </Grid> */}
+        {/* <Grid item container justifyContent={"center"} mt={5}>
           <img src={video} style={{ maxWidth: "100%" }} />
-        </Grid>
+        </Grid> */}
       </Grid>
+     
+
     </>
   );
 };

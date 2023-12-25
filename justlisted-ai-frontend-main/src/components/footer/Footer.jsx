@@ -1,6 +1,6 @@
 import React from 'react'
 import "./footer.scss"
-import { NAVITEM } from '../../utils/navitem/navItem'
+import { NAVITEM1 } from '../../utils/navitem/navItem'
 import { NavLink, Link } from 'react-router-dom'
 import logo from "../../assets/logo.png"
 
@@ -12,7 +12,7 @@ function Footer() {
                     <div className="nvigations">
                         <img src={logo} alt="" />
                         <div className="footer-nav-links">
-                            {NAVITEM.map((ITEM, i) => (
+                            {NAVITEM1.map((ITEM, i) => (
                                 <NavLink className={({ isActive }) =>
                                     isActive ? "nav-buttonactive " : ""
                                 } key={i} to={ITEM.PATH}>
