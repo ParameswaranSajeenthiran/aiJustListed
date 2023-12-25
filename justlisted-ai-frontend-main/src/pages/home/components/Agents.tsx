@@ -8,10 +8,34 @@ import {
   Avatar,
 } from "@mui/material";
 import man1 from "../../../assets/home/man1.png";
+import mediaRealEstate from "../../../assets/home/mediaRealEstate.png";
 
 const Agents = () => {
+
+  const styles = {
+    paperContainer: {
+      backgroundImage: `url(${mediaRealEstate})`,
+      backgroundSize: "cover",
+      width: "100%",
+      height:500,
+  
+    },
+  
+  };
   return (
     <>
+    <Grid
+        item
+        xs={12}
+        style={styles.paperContainer}
+        sx={{
+          mt: 0,
+          mb: { xs: 0, lg: 0 },
+          height: { lg: "700px", xs: "500px" },
+        }}
+    >
+
+    
       <Container maxWidth="lg" sx={{ mb: 10 }} id="Testimonial">
         <Typography
           sx={{ color: "gray", fontWeight: "700", fontSize: "36px" }}
@@ -66,6 +90,7 @@ const Agents = () => {
           </Grid>
         </Grid>
       </Container>
+      </Grid>
     </>
   );
 };

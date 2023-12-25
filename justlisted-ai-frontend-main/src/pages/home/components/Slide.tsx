@@ -4,10 +4,11 @@ import video from "../../../assets/home/Video.png";
 import womanLake from "../../../assets/home/womanLake.png";
 
 import titleCOntainer from "../../../assets/home/titleContainer.png";
+import group1 from "../../../assets/home/group1.png";
 // style for backgronnd image
 const styles = {
   paperContainer: {
-    backgroundImage: `url(${womanLake})`,
+    backgroundImage: `url(${group1})`,
     backgroundSize: "cover",
     width: "100%",
     height:1500,
@@ -16,7 +17,7 @@ const styles = {
   titleContainer: {
     backgroundImage: `url(${titleCOntainer})`,
     backgroundSize: "cover",
-    width: "100%",
+    width: "200%",
     height: 600,
   }
 };
@@ -31,11 +32,11 @@ const Slide = () => {
         paddingTop={10}
         sx={{
           mt: 9,
-          mb: { xs: 0, lg: 50 },
+          mb: { xs: 0, lg: 0 },
           height: { lg: "700px", xs: "500px" },
         }}
       >
-        <Container style={styles.titleContainer}  maxWidth="lg" sx={{ textAlign: "center" }}>
+        <Container  sx={{ textAlign: "center"  ,width:2000}}>
           {/* <Typography
             sx={{
               fontSize: { xs: "20px", lg: "60px" },

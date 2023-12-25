@@ -1,8 +1,8 @@
 .keyfeature {
-  background: #072b4f;
+  background: #000;
   width: 100%;
   padding: 80px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   @media screen and (width< 600px) {
     padding: 10px;
   }
@@ -32,7 +32,7 @@
       flex-shrink: 0;
       border-radius: 21px;
       border: 1px solid #03305e;
-      background: #062748;
+      background: #fff;
       padding: 30px;
       cursor: pointer;
       @media screen and (width< 600px) {
@@ -50,7 +50,7 @@
         justify-content: flex-start;
         gap: 20px;
         align-items: center;
-        color: var(--white-900, #fff);
+        color: var(--white-900, #000);
         font-family: Hero New;
         font-size: 20px;
         font-style: normal;
@@ -64,10 +64,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          background: var(
-            --Primary,
-            linear-gradient(90deg, #ee4335 0%, #f9aa41 100%)
-          );
+          background:#BFFC00
         }
       }
       p {
