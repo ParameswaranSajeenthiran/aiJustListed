@@ -19,7 +19,7 @@ export  const NAVITEM1=[
 export  const NAVITEM2=[
     {
         TITLE:"pricing",
-        PATH: "/"
+        PATH: "/pricing"
     },
     {
         TITLE:"signUp",

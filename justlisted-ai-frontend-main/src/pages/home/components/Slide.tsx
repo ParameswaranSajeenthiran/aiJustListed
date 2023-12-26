@@ -5,10 +5,11 @@ import womanLake from "../../../assets/home/womanLake.png";
 
 import titleCOntainer from "../../../assets/home/titleContainer.png";
 import group1 from "../../../assets/home/group1.png";
+import test from "../../../assets/home/test.png";
 // style for backgronnd image
 const styles = {
   paperContainer: {
-    backgroundImage: `url(${group1})`,
+    backgroundImage: `url(${test})`,
     backgroundSize: "cover",
     width: "100%",
     height:1500,
@@ -29,11 +30,11 @@ const Slide = () => {
         item
         xs={12}
         style={styles.paperContainer}
-        paddingTop={10}
+        paddingTop={0}
         sx={{
-          mt: 9,
+          mt: 0,
           mb: { xs: 0, lg: 0 },
-          height: { lg: "700px", xs: "500px" },
+          height: { lg: "600px", xs: "500px" },
         }}
       >
         <Container  sx={{ textAlign: "center"  ,width:2000}}>

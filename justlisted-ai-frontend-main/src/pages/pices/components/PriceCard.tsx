@@ -1,14 +1,35 @@
 import { Box, Grid, Typography, Container, Button, Card } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
+import baseUrl from "../../../baseURL";
 
 // price details 
 const price = [
-    { head1: 'Small', head2: 'For Individual Users', price: '10' },
-    { head1: 'Medium', head2: 'For bigger teams', price: '99' },
-    { head1: 'Large', head2: 'Unlimited possibilities', price: '799' },
+    { head1: 'Professional', head2: 'For Individual Users', price: '10' },
+    { head1: 'Gold', head2: 'For bigger teams', price: '99' },
+    { head1: 'Platinum', head2: 'Unlimited possibilities', price: '799' },
 ]
 
 const PriceCard = () => {
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log(e.target.name,"testtt")
+        
+        baseUrl
+          .patch("user/findOneupdate", {"subscription":e.target.name})
+          .then((response) => {
+            console.log(response);
+            // if (response.data.success ) {
+            //   toast("user update successfully")
+            // }
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+
+
+    
     // icon style
     const icon = { marginBottom: '20px', borderRadius: '50px', height: '24px', marginRight: '20px', width: '24px', background: 'linear-gradient(90deg, #EE4335 0%, #F9AA41 100%)', textAlign: 'center', alignItems: 'center', color: '#2A3342', fontWeight: '600', position: 'relative', display: 'flex' }
     return (
@@ -28,7 +49,7 @@ const PriceCard = () => {
                             </Box>
 
                             <Box sx={{ mb: 5 }}>
-                                <Button sx={{ background: ' linear-gradient(90deg, #EE4335 0%, #F9AA41 100%)', color: 'white' }}>Get Started Now</Button>
+                                <Button name={det.head1} onClick={handleSubmit} sx={{ background: ' linear-gradient(90deg, #EE4335 0%, #F9AA41 100%)', color: 'white' }}>Get Started Now</Button>
                             </Box>
 
                             <Grid item container sx={{ justifyContent: 'center' }}>

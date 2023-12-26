@@ -24,9 +24,12 @@ function Welcome() {
       </div>
       <div className="container">
         <div className="welcome-message">
-          <img src={logo} alt="" />
-          <div className="userName">Welcome {userName} !</div>
-          <p>Experience the art of living in every property.</p>
+        <div className="userName">WELCOME</div>
+        <div className="userName"> {userName?.toUpperCase()} !</div>
+
+       
+         
+          <p style={{fontSize:20, fontWeight:800 ,color:'white'}}>EXPERIENCE THE ART OF LIVING IN EVERY PROPERTY.</p>
           <div className="buttons">
             <Link to={"/premade"}>
               <PremadeSvg />

@@ -44,10 +44,10 @@ function WorkSideBar() {
   return (
     <div className={`${close ? "" : "containerclose"} workSidebar`}>
       <div className="container">
-        <div className={`${close ? "" : "headerclose"} header`}>
+        <div style={{backgroundColor:"#BFFC00"}} className={`${close ? "" : "headerclose"} header`}>
           <div className={`${close ? "" : "titleclose"} title`} onClick={() => navigate("/welcome")}>
             <NewProjectSvg  />
-            New Project
+            NEW PROJECT
           </div>
           <HumberIconSvg
             onClick={() => setclose(!close)}

@@ -9,6 +9,7 @@ interface CategoryDropDownProps {
   //   onchange: string;
   title: string;
   error: Boolean;
+  height?:number
 }
 
 const InputTextArea: React.FC<CategoryDropDownProps> = ({
@@ -18,11 +19,13 @@ const InputTextArea: React.FC<CategoryDropDownProps> = ({
   onchange,
   title,
   error,
+  height
 }) => {
   return (
     <div className="form-control-area">
       <label htmlFor="">{title}</label>
       <textarea
+      style={{height:height}}
         name={name}
         placeholder={placeholder}
         value={value}

@@ -74,7 +74,7 @@
           }
         }
         .nav-buttonactive {
-          color: #072b4f;
+          color: #BFFC00;
 
           font-weight: 700;
         }
@@ -136,7 +136,7 @@
           align-items: center;
           padding: 5px;
           background: #fff;
-          color: #072b4f;
+          color: #BFFC00;
           font-size: 12px;
           font-weight: 400;
         }
@@ -148,7 +148,7 @@
           display: flex;
           align-items: center;
           gap: 10px;
-          color: #072b4f;
+          color: #BFFC00;
           font-size: 12px;
           font-weight: 400;
         }
@@ -278,6 +278,10 @@
       }
       .title {
         display: flex;
+        font-variant-caps: all-small-caps;
+        font-weight: bolder;
+        font-family: 'Courier New', monospace;
+        font-size: 28px;
         align-items: center;
         gap: 10px;
       }

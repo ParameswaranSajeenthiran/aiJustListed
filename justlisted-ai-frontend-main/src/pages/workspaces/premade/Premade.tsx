@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { setPreMade } from "../../../redux/actions/premadeAction";
 import { LANGUAGES } from "../../../utils/dropItem/dropItems";
 import { setloadeActive, setloadeDeactive } from "../../../redux/actions/loaderActions";
+import { toast } from "react-toastify";
 
 function Premade() {
   const { ID } = useParams();
@@ -82,13 +83,24 @@ function Premade() {
       baseUrl
         .post("premade/premade-summary", formData)
         .then((response) => {
+          console.log(response.status);
+
+          // handle 403
+          
           dispatch(setPreMade("generateSummary", response.data.summary));
           dispatch(setloadeDeactive())
           navigate(`/ownWord/${response.data.id}`);
 
         })
         .catch((e) => {
+          dispatch(setloadeDeactive())
+
           console.log(e);
+          if(e.response.status === 403){
+            console.log(e.response.data)
+            toast(e.response.data.message)
+            // navigate("/pricing")
+          }
         });
     }
   };
@@ -112,6 +124,7 @@ function Premade() {
           <InputTextArea
             name="premadeList"
             error={false}
+            height={500}
             onchange={handleChange}
             placeholder="Pre-made list"
             title="Pre-made list"
